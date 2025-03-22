@@ -34,3 +34,24 @@ const carroDaMaria2 = new Carro('Ka', 'Ford', 2021, 2020);
 
 console.log(carroDoJoao2);
 console.log(carroDaMaria2);
+
+// Criando objetos de forma literal sem o uso do NEW Object
+
+const nome = 'Caio'
+const idade = 23
+const maiorDeIdade = true
+const conhecimentos = ['html', 'css', 'javascript']
+
+const pessoa = {
+    nome: nome,
+    idade: idade,
+    maiorDeIdade: maiorDeIdade,
+    conhecimentos: conhecimentos
+}
+
+console.log(typeof nome)
+console.log(typeof idade)
+console.log(typeof maiorDeIdade)
+console.log(typeof conhecimentos)
+
+console.log(carroDaMaria2 instanceof Carro)
