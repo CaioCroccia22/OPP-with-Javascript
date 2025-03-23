@@ -32,10 +32,10 @@ function Carro(modelo, fabricante, anoModelo, anoFabricacao){
 const carroDoJoao2 = new Carro('Fiesta', 'Ford', 2020, 2019);
 const carroDaMaria2 = new Carro('Ka', 'Ford', 2021, 2020);
 
-console.log(carroDoJoao2);
-console.log(carroDaMaria2);
+// console.log(carroDoJoao2);
+// console.log(carroDaMaria2);
 
-// Criando objetos de forma literal sem o uso do NEW Object
+//---------- Criando objetos de forma literal sem o uso do NEW Object
 
 const nome = 'Caio'
 const idade = 23
@@ -49,9 +49,35 @@ const pessoa = {
     conhecimentos: conhecimentos
 }
 
-console.log(typeof nome)
-console.log(typeof idade)
-console.log(typeof maiorDeIdade)
-console.log(typeof conhecimentos)
+// console.log(typeof nome)
+// console.log(typeof idade)
+// console.log(typeof maiorDeIdade)
+// console.log(typeof conhecimentos)
 
-console.log(carroDaMaria2 instanceof Carro)
+// console.log(carroDaMaria2 instanceof Carro)
+
+
+//---------Acessando atributos
+
+console.log(pessoa.nome);
+console.log(pessoa['nome']);
+
+// Adicionando atributos de forma dinamicar
+function exibeAtributos(nomeAtributo){
+    console.log(pessoa[nomeAtributo])
+}
+
+exibeAtributos('nome')
+
+pessoa['sobrenome'] = undefined;
+
+// Verifica se o valor da propriedade sobrenome é "truthy" (ou seja, um valor que o JavaScript considera verdadeiro).
+if(pessoa['sobrenome']){
+    console.log('a pesssoa tem um sobrenome')
+}
+
+
+// Verifica se a chave/prpriedade "sobrenome" existe no objeto, independentemente do valor dela.
+if ('sobrenome' in pessoa){
+    console.log('tem sobrenome')
+}
