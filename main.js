@@ -58,8 +58,15 @@ const pessoa = {
 
 
 //---------Acessando atributos
-
+pessoa.nome = 'Caio Croccia'
 console.log(pessoa.nome);
+
+Object.freeze(pessoa)
+
+
+
+
+
 console.log(pessoa['nome']);
 
 // Adicionando atributos de forma dinamicar
@@ -69,7 +76,7 @@ function exibeAtributos(nomeAtributo){
 
 exibeAtributos('nome')
 
-pessoa['sobrenome'] = undefined;
+pessoa.nome = 'Croccia Caio';
 
 // Verifica se o valor da propriedade sobrenome é "truthy" (ou seja, um valor que o JavaScript considera verdadeiro).
 if(pessoa['sobrenome']){
@@ -81,3 +88,7 @@ if(pessoa['sobrenome']){
 if ('sobrenome' in pessoa){
     console.log('tem sobrenome')
 }
+
+console.log(pessoa.nome)
+console.log(Object.keys(pessoa))
+console.log(Object.values(pessoa))
